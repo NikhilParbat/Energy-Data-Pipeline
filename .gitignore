@@ -1,0 +1,75 @@
+# -------------------------
+# Go
+# -------------------------
+# Binaries
+/bin/
+/*.exe
+/*.exe~
+/*.dll
+/*.so
+/*.dylib
+
+# Output of `go test`
+/*.test
+
+# Go modules
+/go.sum
+
+# IDE/editor files
+*.swp
+*.swo
+*.idea/
+*.vscode/
+
+# -------------------------
+# Python
+# -------------------------
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# -------------------------
+# Environment / Secrets
+# -------------------------
+.env
+*.env
+
+# -------------------------
+# Docker
+# -------------------------
+# Compose overrides
+docker-compose.override.yml
+# Docker image layers, local builds
+*.tar
+*.img
+**/tmp/
+
+# -------------------------
+# Database / Misc
+# -------------------------
+*.sqlite
+*.db
+*.bak
+*.csv    # optionally ignore large temporary CSVs, keep source CSVs in repo if small
+*.zip
+*.tar.gz
+
+# -------------------------
+# OS / Editors
+# -------------------------
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
