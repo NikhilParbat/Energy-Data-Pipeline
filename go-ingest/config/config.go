@@ -9,13 +9,13 @@ import (
 )
 
 type Config struct {
-	DB_DSN         string
-	CarbonAPIURL   string
-	OpenAQAPIURL   string
-	OpenAQAPIKey   string
-	LookbackHours  int
-	MaxRetries     int
-	TimeoutSeconds int
+	DB_DSN         string `mapstructure:"DB_DSN"`
+	CarbonAPIURL   string `mapstructure:"CARBON_API_URL"`
+	OpenAQAPIURL   string `mapstructure:"OPENAQ_API_URL"`
+	OpenAQAPIKey   string `mapstructure:"OPENAQ_API_KEY"`
+	LookbackHours  int    `mapstructure:"LOOKBACK_HOURS"`
+	MaxRetries     int    `mapstructure:"MAX_RETRIES"`
+	TimeoutSeconds int    `mapstructure:"TIMEOUT_SECONDS"`
 }
 
 func LoadConfig() Config {

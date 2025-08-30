@@ -9,6 +9,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/NikhilParbat/Energy-Data-Pipeline/go-ingest/config/config.go"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -36,6 +37,11 @@ func main() {
 	// ENV:
 	// DB_DSN example: "postgres://energy:energy@localhost:5432/energy?sslmode=disable"
 	// LOOKBACK_HOURS optional: default 24
+	config, err := config.LoadConfig(".")
+	if err != nil {
+		log.Fatal("Cannot load config", err)
+	}
+
 	dsn := mustEnv("DB_DSN")
 	lookback := 24
 	if os.Getenv("LOOKBACK_HOURS") != "" {
